@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <input type="button" value="start" onclick="startCounter()">
+    <input type="button" value="pause" onclick="stopCounter()" >
+    <input type="button" value="reset" onclick="resetTimer()">
+ 
+    <h1>Time is </h1>
+    <h1 id="counter">00</h1>
+    <script>
+      var a = 0;
+      var k;
+
+      function startCounter(){
+        k = setInterval(printTimer,10)
+      }
+
+      function stopCounter(){
+        clearInterval(k);
+      }
+
+      function resetTimer(){
+        stopCounter();
+        a=0;
+        var temp = document.getElementById("counter");
+        temp.innerHTML="00";
+      }
+
+      function printTimer(){
+          a++;
+          var temp = document.getElementById("counter"); 
+          temp.innerHTML = a/100;
+      }
+    </script>
+  </body>
+</html>
