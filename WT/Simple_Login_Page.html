@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Static login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <input type="text" id="UserName" placeholder="Enter userName"><br/>
+    <input type="text" id="Password" placeholder="Enter Password">
+    <input type="button" value="Show" onclick="passVisibility()" id="visibility"><br/>
+    <input type="button" value="Login" onclick="login()">
+
+    <h1 id="ans"></h1>
+    <script>
+        function login(){
+            var userName = document.getElementById("UserName");
+            var password = document.getElementById("Password");
+
+            if(userName.value == "kishan" && password.value == "kish@n7"){
+                document.getElementById('ans').innerHTML = "Login successfully..."
+            }
+            else{
+             document.getElementById('ans').innerHTML = "Invalid user!"
+            }
+        }
+
+        function passVisibility(){
+            var pass = document.getElementById("Password");
+            var visibiliityButton = document.getElementById("visibility");
+            if(pass.type == "text"){
+                pass.type = "Password";
+                visibiliityButton.value = "Show";
+            }
+            else{
+                pass.type="text";
+                visibiliityButton.value = "Hide";
+            }
+        }
+    </script>
+  </body>
+</html>
