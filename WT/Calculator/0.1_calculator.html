@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <table>
+        <tr>
+            <td>Enter No.1 : </td>
+            <td><input type="text" id="No.1" placeholder="Enter Number"></td>
+        </tr>
+        <tr>
+            <td>Enter No.2 : </td>
+            <td><input type="text" id="No.2" placeholder="Enter Number"></td>
+        </tr>
+        <tr colspan="3">
+            <td colspan="3" align="center">  
+                <input type="button" value="+" onclick="sum()">
+                <input type="button" value="-" onclick="sub()">
+                <input type="button" value="*" onclick="mul()">
+                <input type="button" value="/" onclick="div()">
+            </td>
+        </tr>
+        <tr>
+            <td><h1>Ans = </h1></td>
+            <td colspan="3"><h1 id="ans"></h1></td>
+        </tr>
+    </table>
+    <script>
+        function sum(){
+            var Para1 = document.getElementById("No.1");
+            var Para2 = document.getElementById("No.2");
+            var ans = document.getElementById("ans");
+            
+            a = parseInt(Para1.value) + parseInt(Para2.value);
+            ans.innerHTML = a
+        }
+        function sub(){
+            var Para1 = document.getElementById("No.1");
+            var Para2 = document.getElementById("No.2");
+            var ans = document.getElementById("ans");
+            
+            a = parseInt(Para1.value) - parseInt(Para2.value);
+            ans.innerHTML = a
+        }
+        function mul(){
+            var Para1 = document.getElementById("No.1");
+            var Para2 = document.getElementById("No.2");
+            var ans = document.getElementById("ans");
+            
+            a = parseInt(Para1.value) * parseInt(Para2.value);
+            ans.innerHTML = a
+        }
+        function div(){
+            var Para1 = document.getElementById("No.1");
+            var Para2 = document.getElementById("No.2");
+            var ans = document.getElementById("ans");
+            
+            a = parseInt(Para1.value) / parseInt(Para2.value);
+            ans.innerHTML = a
+        }
+    </script>
+  </body>
+</html>
