@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>registration form</title>
+</head>
+<body>
+<form>
+	<table>
+		<tr>
+			<td>
+				User Id:
+			</td>
+			<td>
+<input type="text" id="uname">
+
+</td>
+</tr>
+<tr>
+	<td>
+		Contact:
+	</td>
+	<td>
+<input type="text" id="uContact">
+</td>
+</tr>
+
+<tr>
+	<td>
+		Pincode:
+	</td>
+	<td>
+<input type="text" id="upincode">
+</td>
+</tr>
+<tr>
+	<td>
+		Email:
+	</td>
+	<td>
+<input type="text" id="uemail">
+</td>
+</tr>
+<tr>
+	<td>
+		password:
+	</td>
+	<td>
+<input type="text" id="upassword">
+</td>
+</tr>
+<tr>
+	<td>
+<input type="button" value="validate" onclick="checkform()">
+</td>
+</tr>
+</table>
+</form>
+<script type="text/javascript">
+	function checkform(){
+		// var ucheck = /^[a-zA-Z]{1}[A-Za-z]+[._]{0,2}[a-zA-Z0-9]+$/;
+		// var ucheck1 = /^(\+91){1}[6-9]{1}[0-9]{9}$/;
+		// var ucheck2 = /^[3-4]{1}[0-9]{5}$/;
+		// var ucheck3 = /^[a-zA-Z]{1}[A-Za-z0-9]+[._-]?[a-zA-Z0-9]+@(gmail|yahoo)\.(com|in|ac)$/;
+
+		var password = document.getElementById('uemail').value;
+		var ucheck3 = /^(?=.*[0-9])(?=.*[$?@%*+])[a-zA-Z0-9$?@%*+]{8,12}$/;
+		var regx3= new RegExp(ucheck3);
+		if(regx3.test(password))
+		{
+			alert('success');
+		}
+		else
+		{
+			alert('fail');
+		}
+	}
+</script>
+</body>
+</html>
