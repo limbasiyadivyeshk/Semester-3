@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 5px solid black;
+            width: 80%;
+            height: 40vh;
+            float: right;
+            margin: 60px 30px 60px 150px;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <button id = "chkAll" onclick="checkAll()">SelectAll</button>
+    <button id = "unchkAll" onclick="uncheckAll()">DiSelectAll</button><br>
+
+    <div id="container"></div>
+
+    <script>
+        function createElement(start, end){
+            for(i=start;i<=end;i++){
+                document.write("<input type='checkbox' value="+i+" onclick='check()'>");
+                document.write(i+"<br>");
+            }
+        }
+        createElement(101,120);
+        createElement(201,220);
+        createElement(301,320);
+        function checkAll(){
+            var ck = document.getElementsByTagName("input");
+            divi = document.getElementById("container");
+            divi.innerHTML = '';
+            for(i=0;i<=ck.length;i++){
+                ck[i].checked = true;
+            }
+        }
+        function uncheckAll(){
+            var ck = document.getElementsByTagName("input");
+            for(i=0;i<=ck.length;i++){
+                ck[i].checked = false;
+            }
+        }
+        function check(){
+            unck = document.getElementsByTagName("input");
+            divi = document.getElementById("container");
+            divi.innerHTML = '';
+            for(i=0;i<=unck.length;i++){
+                if(unck[i].checked == false){
+                    divi.innerHTML += unck[i].value + ', '; 
+                }
+            }
+        }
+    </script>
+</body>
+</html>
