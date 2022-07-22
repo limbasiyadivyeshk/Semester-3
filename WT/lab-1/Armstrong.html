@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = prompt("Enter the value of n = ")
+		len=a.length;
+		n = parseInt(a);
+		sum=0;
+		temp = n;
+		while(n>0){
+			rem=n%10;
+			
+			sum+=Math.pow(rem,len);
+			n = n/10;
+			n = parseInt(n);
+		}
+
+		document.write(sum);
+		if(sum==temp){
+			document.write("Number is armstrong");
+		}
+		else{
+			document.write("Number is Not armstrong");
+		}
+		
+	</script>
+</body>
+</html>
