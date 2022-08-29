@@ -5,7 +5,7 @@ create Procedure PR_Person_Info_Insert
 	@PersonID		int,
 	@PersonName		Varchar(50),
 	@Salary			Decimal(8,2),
-	@JoiningDate	Datetime,
+	@JoiningDate		Datetime,
 	@City			Varchar(100),
 	@Age			int,
 	@BirthDate		Datetime
@@ -121,7 +121,7 @@ exec PR_Person2_Delete 1
 
 --II.
 
-	create Trigger TR_Person2_Update
+	create Trigger TR_person_Info_Update
 	on Person_Info
 	for update
 	as
@@ -137,7 +137,7 @@ exec PR_Person2_Delete 1
 	values (
 			@PersonID,
 			@PersonName,
-			'record insert',
+			'record update',
 			GETDATE()
 			)
 	end
