@@ -36,7 +36,7 @@ Where sem=5
 --4. Display All the Details of first three students.
 select Top 3 * From Student_info
 
---5. Display Name & Enrollment no of first 30% Students whoâ€™s contact number ends with 7.
+--5. Display Name & Enrollment no of first 30% Students who’s contact number ends with 7.
 select top 30 percent name,enrollmentNo from Student_info
 where contactNO like '%7'
 
@@ -47,11 +47,11 @@ select distinct sem from Student_info
 select name from Student_info
 where EnrollmentNo is null
 
---8. Find All Students whose Name does not start with â€˜Vâ€™.
+--8. Find All Students whose Name does not start with ‘V’.
 select name from Student_info
 where name not like 'v%'
 
---9. Find All Students in which Email Contains â€˜3@Gâ€™ & Only Six Characters.
+--9. Find All Students in which Email Contains ‘3@G’ & Only Six Characters.
 select name from Student_info
 where email like '%3@G%' and email like '______'
 
@@ -75,7 +75,7 @@ where BirthDate > '1990-01-01'
 update Student_info set Division = 'BCX-5', Sem = 5
 Where StdId = 102
 
---15. Change the Studentâ€™s Name to Firoz Sherasiya in which Email is Firoz.Me@Gmail.Com & Contact No is 8885999922.
+--15. Change the Student’s Name to Firoz Sherasiya in which Email is Firoz.Me@Gmail.Com & Contact No is 8885999922.
 update Student_info set name = 'Firoz Sherasiya'
 Where Email = 'firoz.me@gmail.com' and ContactNo = '8885999922'
 
