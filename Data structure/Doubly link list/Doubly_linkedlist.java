@@ -148,7 +148,7 @@ public class Doubly_linkedlist {
         ln.insertatfirst(0);
         ln.insertatlast(3);
         // ln.insertatgametya(4, 3);
-        ln.deleteSpecified(1);
+        ln.deleteSpecified(4);
         ln.displaynode();
     }
 }

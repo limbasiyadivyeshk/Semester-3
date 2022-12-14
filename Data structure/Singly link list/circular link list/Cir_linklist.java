@@ -79,25 +79,33 @@ class Link{
             head = head.next;
             tail.next = head;
             return;
-        }
-        Node currNode = head;
-        Node pred = currNode;  
+        }  
+        Node temp1=head;
+        Node temp2=head.next;
         if(size+1 == position){
-            while(currNode.next != tail){
-                currNode = currNode.next;
-                currNode.next = tail;
-                tail.next = head;
-            }
-            return;
+            
+            while(temp2!=null)
+            {
+                temp2=temp1.next;
+               if(temp2==tail) {
+                temp1.next=head;
+                tail=temp1;
+                size--;
+                return;
+               }
+               temp1=temp1.next;
+            } 
         }
-        for(int i=0;i<size+1;i++){
+        else{
+        for(int i=2;i<size+1;i++){
             if(i == position){
-                pred = currNode;
-                currNode = currNode.next;
-                pred.next = currNode.next;
+                temp1.next = temp2.next;
                 return;
             }
-        }  
+            temp2 = temp2.next;
+            temp1 = temp1.next;
+        } 
+    } 
     }
 
     void display(){
@@ -128,7 +136,7 @@ public class Cir_linklist{
         // ln.deleteatlast();
         // ln.display();
 
-        ln.deleteSpecified(4);
+        ln.deleteSpecified(1);
         ln.display();
         // System.out.println(a);
     }
